@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    padding: 25px;
+}
+
+button {
+    appearance: none;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 1em 2.3em;
+    text-align: center;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+button:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+#credentials, #acronym{
+    width: 500px;
+    color: black;
+    background-color: white;
+}
+body{
+    overflow: hidden;
+}
+.border{
+    border: 5px solid black;
+}
+input{
+    width: 30%;
+    height: 25px;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
