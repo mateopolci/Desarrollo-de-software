@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
 *{
     margin: 0;
     padding: 0;
-}
-
-body{
-    background-color: black;
-    font-family: "Montserrat", sans-serif;
 }
 
 .mainDiv{
@@ -16,7 +15,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+}
+
+.homelogo{
+    width: 20px !important;
 }
 
 main{
@@ -31,14 +33,15 @@ main{
 }
 
 #alertButton, a{
-    font-weight: 600;
-    font-size: 15px;
+    background-color: aqua !important;
+    margin: 50px;
     padding: 20px;
-    border-radius: 10px;
-    background-color: aqua;
-    transition: .5s, color .10s;
-    -webkit-transition: .5s, color .10s;
-    -moz-transition: .5s, color .10s;
+    text-decoration: none !important;
+    color: black !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    border: black, 1px, solid !important; 
 }
 
 #alertButton:hover, a:hover{
@@ -49,24 +52,19 @@ main{
 }
 
 ::selection{
-    color: white;
-}
-
-a{
-    background-color: aqua;
-    margin: 50px;
-    padding: 20px;
-    text-decoration: none;
-    color: black;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 15px;
-}
-
-.mainBs{
-    background-color: black;
+    background-color: aqua !important;
 }
 
 img{
     width: 200px;
+}
+
+.cards{
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
 }
