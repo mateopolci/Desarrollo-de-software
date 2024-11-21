@@ -1,0 +1,51 @@
+type Album struct {
+	Id    int     `json:"id"`
+	Name  string  `json:"name"`
+	Price float64 `json:"price"`
+}
+
+var albums = []Album{
+	{
+		Id:    1,
+		Name:  "Fly me to the moon",
+		Price: 24.39,
+	},
+	{
+		Id:    2,
+		Name:  "A sky full of stars",
+		Price: 12.45,
+	},
+	{
+		Id:    3,
+		Name:  "Eyes on me",
+		Price: 7.34,
+	},
+	{
+		Id:    4,
+		Name:  "The way you look tonight",
+		Price: 14.56,
+	},
+}
+
+var db *gorm.DB
+
+func initBD() {
+	var err error
+
+	//Abrir la DB
+	db, err = gorm.Open(sqlite.Open("albums.db"), &gorm.Config{})
+	if err != nil {
+		panic(err)
+	}
+
+	//Migrar la estructura
+	err = db.AutoMigrate(&Album{})
+	if err != nil {
+		panic(err)
+	}
+
+	//Cargar los albumes
+	for _, album := range albums {
+		db.FirstOrCreate(&album, album)
+	}
+}

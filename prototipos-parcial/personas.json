@@ -1,0 +1,10 @@
+{
+    "personas": [
+        { "id": 1, "nombre": "Juan", "apellido": "García" },
+        { "id": 2, "nombre": "María", "apellido": "López" },
+        { "id": 3, "nombre": "Carlos", "apellido": "Martínez" },
+        { "id": 4, "nombre": "Ana", "apellido": "Rodríguez" },
+        { "id": 5, "nombre": "Pedro", "apellido": "Sánchez" },
+        { "id": 6, "nombre": "Pepe", "apellido": "Gio" }
+    ]
+}
